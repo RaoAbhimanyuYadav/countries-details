@@ -1,0 +1,28 @@
+.home input,.home select{
+    background-color:var(--primary);
+    color: hsl(0, 0%, 100%);
+    padding: 7px;
+    border-radius: 5px;
+}
+.search{
+    position: relative;
+}
+#root > div > div > div.home-filter > div > svg{
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    color: hsl(0, 0%, 100%);
+}
+.search input{
+    padding-left: 40px;
+    
+}
+.search input::placeholder{
+    color: hsl(0, 0%, 100%);
+    
+}
+.home-filter{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}

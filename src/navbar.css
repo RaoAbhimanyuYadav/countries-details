@@ -1,0 +1,17 @@
+.navbar{
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    padding: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.navbar section {
+    display: flex;
+}
+.navbar section span{
+    margin-top: 3px;
+}
+
