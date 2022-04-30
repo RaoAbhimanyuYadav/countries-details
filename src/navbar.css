@@ -1,8 +1,8 @@
 .navbar{
-    background-color: var(--primary);
+    background-color: var(--element);
     display: flex;
     justify-content: space-between;
-    color: hsl(0, 0%, 100%);
+    color: var(--text-color);
     text-align: center;
     padding: 25px;
     padding-right: 20px;

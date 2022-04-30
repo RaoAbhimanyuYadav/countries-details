@@ -6,10 +6,12 @@
 
 }
 body{
-  background-color: var(--secondary);
+  background-color: var(--background);
   font-family: 'Nunito Sans', sans-serif;
 }
 :root {
-  --primary: hsl(209, 23%, 22%);
-  --secondary: hsl(207, 26%, 17%);
+  --element: hsl(209, 23%, 22%);
+  --background: hsl(207, 26%, 17%);
+  --text-color:hsl(0, 0%, 98%);
+
 }

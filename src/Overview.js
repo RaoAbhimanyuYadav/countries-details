@@ -6,7 +6,7 @@ const Overview = ({ c }) => {
       <Link to={"/" + c.id}>
         <div className="flags" style={{ background: `url(${c.flagSrc}) center center/cover` }}></div>
         <div className="content">
-          <div className="c-name">{c.name}</div>
+          <div className="country-name">{c.name}</div>
           <p>
             <span>Population:</span>
             {c.population}

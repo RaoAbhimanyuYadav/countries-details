@@ -1,5 +1,5 @@
 .detail{
-    color: hsl(0, 0%, 100%);
+    color: var(--text-color);
     font-size: 18px;
     
 }
@@ -22,12 +22,12 @@ padding: 10px;
 .back{
     margin: 50px;
     display: flex;
-    background-color: var(--primary);
+    background-color: var(--element);
     padding: 0px;
     width:110px;
     border-radius: 5px;
     box-shadow: 0px 0px 6px 2px rgb(44, 41, 41);
-    border: 1px solid var(--secondary);
+    border: 1px solid var(--background);
     text-align: center;
     padding-left: 20px;
 }
