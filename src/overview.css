@@ -5,8 +5,9 @@
     display: inline-block;
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
 } 
-.flag{
+.flags{
     min-height: 230px;
 }
 
@@ -30,3 +31,10 @@ padding: 10px ;
     font-weight: 600;
 }
 
+.overview:hover{
+    transform: scale(1.06);
+}
+a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+}

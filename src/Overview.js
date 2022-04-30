@@ -1,23 +1,26 @@
 import "./overview.css";
-const Overview = ({ countryName, population, region, capital, flagSrc }) => {
+import { Link } from "react-router-dom";
+const Overview = ({ c }) => {
   return (
     <div className="overview">
-      <div className="flag" style={{ background: `url(${flagSrc}) center center/cover` }}></div>
-      <div className="content">
-        <div className="country-name">{countryName}</div>
-        <p>
-          <span>Population:</span>
-          {population}
-        </p>
-        <p>
-          <span>Region:</span>
-          {region}
-        </p>
-        <p>
-          <span>Capital:</span>
-          {capital}
-        </p>
-      </div>
+      <Link to={"/" + c.id}>
+        <div className="flags" style={{ background: `url(${c.flagSrc}) center center/cover` }}></div>
+        <div className="content">
+          <div className="c-name">{c.name}</div>
+          <p>
+            <span>Population:</span>
+            {c.population}
+          </p>
+          <p>
+            <span>Region:</span>
+            {c.region}
+          </p>
+          <p>
+            <span>Capital:</span>
+            {c.capital}
+          </p>
+        </div>
+      </Link>
     </div>
   );
 };

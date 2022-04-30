@@ -11,6 +11,8 @@
     grid-column-gap: 50px;
 }
 
+
+
 .home input,.home select{
     background-color:var(--primary);
     color: hsl(0, 0%, 100%);
@@ -25,21 +27,25 @@
 }
 #root > div > div > div.home-filter > div > svg{
     position: absolute;
-    left: 31px;
-    top: 2px;
+    left: 50px;
+    top: 22px;
     color: hsl(0, 0%, 100%);
 }
 .search input{
     margin-left: 23px;
-    padding-left: 40px;
+   font-size: 18px;
+    padding: 25px;
+    padding-left: 80px;
+    width: 400px;
     
 }
 .home select{
     margin-right: 22px;
+    font-size: 18px;
 }
 .search input::placeholder{
     color: hsl(0, 0%, 100%);
-    font-size: 14px;
+    font-size: 18px;
     
 }
 .home-filter{

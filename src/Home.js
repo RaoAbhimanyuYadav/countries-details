@@ -1,32 +1,50 @@
-import Navbar from "./Navbar";
 import Overview from "./Overview";
 import "./home.css";
 import SearchIcon from "@mui/icons-material/Search";
+import { useState } from "react";
 
 const Home = () => {
   const data = JSON.parse(localStorage.getItem("countryData"));
-  console.log(data[0]);
+
+  const [region, setRegion] = useState("All");
+  const [searchCountry, setSearchCountry] = useState("");
+  const handleChange = (e) => {
+    setRegion(e.target.value);
+  };
+  let countries = data;
+  if (region !== "All") {
+    countries = data.filter((country) => {
+      return country.region.includes(region);
+    });
+  }
+  const handleSearch = (e) => {
+    setSearchCountry(e.target.value.trim());
+  };
+
+  let searchedCounteries = countries.filter((country) => {
+    return JSON.stringify(country).toLowerCase().includes(searchCountry.toLowerCase());
+  });
 
   return (
     <div className="home">
-      <Navbar />
       <div className="home-filter">
         <div className="search">
           <SearchIcon />
-          <input type="text" placeholder="Search for the country..." />
+          <input type="text" onChange={handleSearch} placeholder="Search for the country..." />
         </div>
-        <select name="filter-region" id="filter-region">
+        <select onChange={handleChange}>
           <option value="All">Filter by Region</option>
           <option value="Africa">Africa</option>
-          <option value="America">America</option>
+          <option value="Americas">America</option>
           <option value="Asia">Asia</option>
           <option value="Europe">Europe</option>
-          <option value="Ocenia">Ocenia</option>
+          <option value="Oceania">Oceania</option>
         </select>
       </div>
+
       <div className="grid-container">
-        {data.map((country) => (
-          <Overview countryName={country.name.common} population={country.population} Region={country.region} capital={country.capital} key={country.cca3} flagSrc={country.flags.png} />
+        {searchedCounteries.map((country) => (
+          <Overview key={country.cca3} c={{ name: country.name.common, region: country.region, population: country.population, capital: country.capital, id: country.cca3, flagSrc: country.flags.png }} />
         ))}
       </div>
     </div>
