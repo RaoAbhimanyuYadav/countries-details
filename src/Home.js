@@ -24,9 +24,11 @@ const Home = () => {
           <option value="Ocenia">Ocenia</option>
         </select>
       </div>
-      {data.map((country) => (
-        <Overview countryName={country.name.common} population={country.population} Region={country.region} capital={country.capital} key={country.cca3} flagSrc={country.flags.png} />
-      ))}
+      <div className="grid-container">
+        {data.map((country) => (
+          <Overview countryName={country.name.common} population={country.population} Region={country.region} capital={country.capital} key={country.cca3} flagSrc={country.flags.png} />
+        ))}
+      </div>
     </div>
   );
 };
