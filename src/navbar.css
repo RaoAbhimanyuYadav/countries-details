@@ -14,5 +14,14 @@
 }
 .navbar section span{
     margin-top: 2px;
+    cursor: pointer;
+}
+@media screen and (max-width :380px) {
+    .navbar{
+        padding: 30px 18px;
+    font-size: 13px;
+
+    }
+    
 }
 

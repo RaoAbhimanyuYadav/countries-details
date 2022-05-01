@@ -24,6 +24,7 @@
 
 .search{
     position: relative;
+    flex-grow: 2;
 }
 #root > div > div > div.home-filter > div > svg{
     position: absolute;
@@ -36,7 +37,7 @@
    font-size: 18px;
     padding: 25px;
     padding-left: 80px;
-    width: 400px;
+    
     
 }
 .home select{
@@ -52,4 +53,37 @@
     display: flex;
     justify-content: space-between;
     padding: 30px;
+    flex-wrap: wrap;
 }
+@media only screen and (max-width :440px) {
+    .search{
+        width: auto;
+    }
+    .search input {
+        font-size: 16px;
+        padding: 29px;
+    padding-left: 50px;
+    margin-left: -19px;
+    }
+    #root > div > div > div.home-filter > div > svg {
+        left: -4px;
+        top:25px;
+        
+    }
+    .home select{
+        position: relative;
+        left: -40px;
+    }
+    
+}
+@media screen and (max-width:668px) {
+    /* .home-filter{
+        display: inline-block;
+    } */
+    .home select{
+        margin: 23px;
+    font-size: 18px;
+    padding: 25px;
+    
+    }
+}  
