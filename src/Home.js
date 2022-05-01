@@ -2,18 +2,18 @@ import Overview from "./Overview";
 import "./home.css";
 import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
+import useData from "./useData";
 
 const Home = () => {
-  const data = JSON.parse(localStorage.getItem("countryData"));
-
+  const data = useData();
   const [region, setRegion] = useState("All");
   const [searchCountry, setSearchCountry] = useState("");
   const handleChange = (e) => {
     setRegion(e.target.value);
   };
-  let countries = data;
+  let countries = data || [];
   if (region !== "All") {
-    countries = data.filter((country) => {
+    countries = countries.filter((country) => {
       return country.region.includes(region);
     });
   }
